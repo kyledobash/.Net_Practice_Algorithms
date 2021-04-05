@@ -34,31 +34,43 @@ namespace CSharp_dotNet_Practice
         //13        15      17      19
 
 
-        public long rowSumOddNumbers(long n)
+        //public long rowSumOddNumbers(long n)
+        //{
+        //    if (n == 1)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        long startingNum = (Convert.ToInt64(Math.Pow(n,2))) - (n - 1);
+        //        long result = 0;
+        //        long counter = 0;
+        //        for (var i = startingNum; counter < n; i += 2)
+        //        {
+        //            result += i;
+        //            counter++;
+        //        }
+        //        return result;
+        //    }
+        //}
+
+        //find the next integral perfect square after n
+        //if the parameter is not a perfect square return -1
+
+        public long FindNextSquare(long num)
         {
-            // TODO
-            //figure out starting number using a loop
-
-            //start at staring number using a loop
-                //increment result
-
-            //return result
-
-            if (n == 1)
+            if (Math.Sqrt(num) % 1 != 0)
             {
-                return 1;
+                return -1;
             }
             else
             {
-                long startingNum = (Convert.ToInt64(Math.Pow(n,2))) - (n - 1);
-                long result = 0;
-                long counter = 0;
-                for (var i = startingNum; counter < n; i += 2)
+                long i = num + 1;
+                while (Math.Sqrt(i) % 1 != 0)
                 {
-                    result += i;
-                    counter++;
+                    i++;
                 }
-                return result;
+                return i;
             }
         }
     }

@@ -18,10 +18,14 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.DescendingOrder(1100000));
             //Console.WriteLine(test.DescendingOrder(0000011));
 
-            Console.WriteLine(test.rowSumOddNumbers(1));
-            Console.WriteLine(test.rowSumOddNumbers(2));
-            Console.WriteLine(test.rowSumOddNumbers(3));
-            Console.WriteLine(test.rowSumOddNumbers(4));
+            //Console.WriteLine(test.rowSumOddNumbers(1));
+            //Console.WriteLine(test.rowSumOddNumbers(2));
+            //Console.WriteLine(test.rowSumOddNumbers(3));
+            //Console.WriteLine(test.rowSumOddNumbers(4));
+            
+            Console.WriteLine(test.FindNextSquare(155));
+            Console.WriteLine(test.FindNextSquare(625));
+            Console.WriteLine(test.FindNextSquare(114));
         }
     }
 }
