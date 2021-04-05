@@ -26,6 +26,40 @@ namespace CSharp_dotNet_Practice
         //    return result;
         //}
 
+        //given the triangle of consecutive odd numbers
+        //calculate the row sums of this triangle
+        //              1
+        //          3       5
+        //      7       9       11
+        //13        15      17      19
 
+
+        public long rowSumOddNumbers(long n)
+        {
+            // TODO
+            //figure out starting number using a loop
+
+            //start at staring number using a loop
+                //increment result
+
+            //return result
+
+            if (n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                long startingNum = (Convert.ToInt64(Math.Pow(n,2))) - (n - 1);
+                long result = 0;
+                long counter = 0;
+                for (var i = startingNum; counter < n; i += 2)
+                {
+                    result += i;
+                    counter++;
+                }
+                return result;
+            }
+        }
     }
 }
