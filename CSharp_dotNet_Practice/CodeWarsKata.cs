@@ -102,9 +102,7 @@ namespace CSharp_dotNet_Practice
 
         public string LikeSystem(string[] likers)
         {
-            int likes = likers.Length;
-
-            switch (likes)
+            switch (likers.Length)
             {
                 case 0:
                     return "No one likes this";
@@ -115,7 +113,7 @@ namespace CSharp_dotNet_Practice
                 case 3:
                     return likers[0] + ", " + likers[1] +" and " + likers[2] + " likes this";
                 default:
-                    return likers[0] + ", " + likers[1] + " and " +  (likes - 2) + " others likes this";
+                    return likers[0] + ", " + likers[1] + " and " +  (likers.Length - 2) + " others likes this";
             }
         }
     }
