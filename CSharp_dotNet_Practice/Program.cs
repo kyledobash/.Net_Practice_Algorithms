@@ -22,10 +22,16 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.rowSumOddNumbers(2));
             //Console.WriteLine(test.rowSumOddNumbers(3));
             //Console.WriteLine(test.rowSumOddNumbers(4));
-            
-            Console.WriteLine(test.FindNextSquare(155));
-            Console.WriteLine(test.FindNextSquare(625));
-            Console.WriteLine(test.FindNextSquare(114));
+
+            //Console.WriteLine(test.FindNextSquare(155));
+            //Console.WriteLine(test.FindNextSquare(625));
+            //Console.WriteLine(test.FindNextSquare(114));
+
+            Console.WriteLine(test.SpinWords("Kyle Dobash"));
+            Console.WriteLine(test.SpinWords("Slater Higgins"));
+            Console.WriteLine(test.SpinWords("Nick Couch"));
+            Console.WriteLine(test.SpinWords("Logan Lauck"));
+            Console.ReadLine();
         }
     }
 }

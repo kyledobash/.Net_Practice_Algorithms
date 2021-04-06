@@ -57,21 +57,55 @@ namespace CSharp_dotNet_Practice
         //find the next integral perfect square after n
         //if the parameter is not a perfect square return -1
 
-        public long FindNextSquare(long num)
+        //public long FindNextSquare(long num)
+        //{
+        //    if (Math.Sqrt(num) % 1 != 0)
+        //    {
+        //        return -1;
+        //    }
+        //    else
+        //    {
+        //        long i = num + 1;
+        //        while (Math.Sqrt(i) % 1 != 0)
+        //        {
+        //            i++;
+        //        }
+        //        return i;
+        //    }
+        //}
+
+        public string SpinWords(string sentence)
         {
-            if (Math.Sqrt(num) % 1 != 0)
+            //split input into in an array
+            //iterate over array
+            //if array at i length is >5 reverse
+            //push to result array
+            //else
+            //push without reversing
+            //join array
+            //return result string
+
+            string[] words = sentence.Split(' ');
+            List<string> resultList = new List<string>();
+
+            foreach (string word in words)
             {
-                return -1;
-            }
-            else
-            {
-                long i = num + 1;
-                while (Math.Sqrt(i) % 1 != 0)
+                if (word.Length >= 5)
                 {
-                    i++;
+                    string backwardsWord = "";
+                    for (var i = word.Length - 1; i >= 0; i--)
+                    {
+                        backwardsWord += word[i];
+                    }
+                    resultList.Add(backwardsWord);
                 }
-                return i;
+                else
+                {
+                    resultList.Add(word);
+                }
             }
+            string result = string.Join(" ", resultList);
+            return result;
         }
     }
 }
