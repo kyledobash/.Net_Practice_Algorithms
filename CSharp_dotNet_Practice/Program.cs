@@ -27,11 +27,20 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.FindNextSquare(625));
             //Console.WriteLine(test.FindNextSquare(114));
 
-            Console.WriteLine(test.SpinWords("Kyle Dobash"));
-            Console.WriteLine(test.SpinWords("Slater Higgins"));
-            Console.WriteLine(test.SpinWords("Nick Couch"));
-            Console.WriteLine(test.SpinWords("Logan Lauck"));
+            //Console.WriteLine(test.SpinWords("Kyle Dobash"));
+            //Console.WriteLine(test.SpinWords("Slater Higgins"));
+            //Console.WriteLine(test.SpinWords("Nick Couch"));
+            //Console.WriteLine(test.SpinWords("Logan Lauck"));
+            //Console.ReadLine();
+
+            Console.WriteLine(test.LikeSystem(new string[0]));
+            Console.WriteLine(test.LikeSystem(new string[] {"Kyle"}));
+            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater"}));
+            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan"}));
+            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan", "Nick"}));
             Console.ReadLine();
+            
+            
         }
     }
 }

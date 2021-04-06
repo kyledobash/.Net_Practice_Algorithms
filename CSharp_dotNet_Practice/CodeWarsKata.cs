@@ -74,38 +74,49 @@ namespace CSharp_dotNet_Practice
         //    }
         //}
 
-        public string SpinWords(string sentence)
+        //public string SpinWords(string sentence)
+        //{
+
+        //    string[] words = sentence.Split(' ');
+        //    List<string> resultList = new List<string>();
+
+        //    foreach (string word in words)
+        //    {
+        //        if (word.Length >= 5)
+        //        {
+        //            string backwardsWord = "";
+        //            for (var i = word.Length - 1; i >= 0; i--)
+        //            {
+        //                backwardsWord += word[i];
+        //            }
+        //            resultList.Add(backwardsWord);
+        //        }
+        //        else
+        //        {
+        //            resultList.Add(word);
+        //        }
+        //    }
+        //    string result = string.Join(" ", resultList);
+        //    return result;
+        //}
+
+        public string LikeSystem(string[] likers)
         {
-            //split input into in an array
-            //iterate over array
-            //if array at i length is >5 reverse
-            //push to result array
-            //else
-            //push without reversing
-            //join array
-            //return result string
+            int likes = likers.Length;
 
-            string[] words = sentence.Split(' ');
-            List<string> resultList = new List<string>();
-
-            foreach (string word in words)
+            switch (likes)
             {
-                if (word.Length >= 5)
-                {
-                    string backwardsWord = "";
-                    for (var i = word.Length - 1; i >= 0; i--)
-                    {
-                        backwardsWord += word[i];
-                    }
-                    resultList.Add(backwardsWord);
-                }
-                else
-                {
-                    resultList.Add(word);
-                }
+                case 0:
+                    return "No one likes this";
+                case 1:
+                    return likers[0] + " likes this";
+                case 2:
+                    return likers[0] + " and " + likers[1] + " likes this";
+                case 3:
+                    return likers[0] + ", " + likers[1] +" and " + likers[2] + " likes this";
+                default:
+                    return likers[0] + ", " + likers[1] + " and " +  (likes - 2) + " others likes this";
             }
-            string result = string.Join(" ", resultList);
-            return result;
         }
     }
 }
