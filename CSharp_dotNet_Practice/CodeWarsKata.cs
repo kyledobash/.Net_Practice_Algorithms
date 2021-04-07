@@ -100,21 +100,48 @@ namespace CSharp_dotNet_Practice
         //    return result;
         //}
 
-        public string LikeSystem(string[] likers)
+        //public string LikeSystem(string[] likers)
+        //{
+        //    switch (likers.Length)
+        //    {
+        //        case 0:
+        //            return "No one likes this";
+        //        case 1:
+        //            return likers[0] + " likes this";
+        //        case 2:
+        //            return likers[0] + " and " + likers[1] + " likes this";
+        //        case 3:
+        //            return likers[0] + ", " + likers[1] +" and " + likers[2] + " likes this";
+        //        default:
+        //            return likers[0] + ", " + likers[1] + " and " +  (likers.Length - 2) + " others likes this";
+        //    }
+        //}
+
+        public int DuplicateCount(string str)
         {
-            switch (likers.Length)
+            string parsedInput = str.ToLower();
+            int mostDuplicates = 0;
+
+            for (int i = 0; i < parsedInput.Length; i++)
             {
-                case 0:
-                    return "No one likes this";
-                case 1:
-                    return likers[0] + " likes this";
-                case 2:
-                    return likers[0] + " and " + likers[1] + " likes this";
-                case 3:
-                    return likers[0] + ", " + likers[1] +" and " + likers[2] + " likes this";
-                default:
-                    return likers[0] + ", " + likers[1] + " and " +  (likers.Length - 2) + " others likes this";
+                int currentDuplicates = 0;
+                for (int j = i + 1; j < parsedInput.Length; j++)
+                {
+                    if (parsedInput[j] == parsedInput[i] && currentDuplicates == 0)
+                    {
+                        currentDuplicates = 2;
+                    }
+                    else if (parsedInput[j] == parsedInput[i])
+                    {
+                        currentDuplicates++;
+                    }
+                }
+                if (currentDuplicates > mostDuplicates)
+                {
+                    mostDuplicates = currentDuplicates;
+                }
             }
+            return mostDuplicates;
         }
     }
 }

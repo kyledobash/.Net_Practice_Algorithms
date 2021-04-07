@@ -33,13 +33,19 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.SpinWords("Logan Lauck"));
             //Console.ReadLine();
 
-            Console.WriteLine(test.LikeSystem(new string[0]));
-            Console.WriteLine(test.LikeSystem(new string[] {"Kyle"}));
-            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater"}));
-            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan"}));
-            Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan", "Nick"}));
+            //Console.WriteLine(test.LikeSystem(new string[0]));
+            //Console.WriteLine(test.LikeSystem(new string[] {"Kyle"}));
+            //Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater"}));
+            //Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan"}));
+            //Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan", "Nick"}));
+            //Console.ReadLine();
+
+            Console.WriteLine(test.DuplicateCount("aAabcd"));
+            Console.WriteLine(test.DuplicateCount("17133bbbBe"));
+            Console.WriteLine(test.DuplicateCount("AABB"));
+            Console.WriteLine(test.DuplicateCount("12334533777"));
+            Console.WriteLine(test.DuplicateCount("abc"));
             Console.ReadLine();
-            
             
         }
     }
