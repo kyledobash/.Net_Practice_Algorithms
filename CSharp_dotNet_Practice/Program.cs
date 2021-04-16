@@ -40,13 +40,19 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.LikeSystem(new string[] {"Kyle", "Slater", "Logan", "Nick"}));
             //Console.ReadLine();
 
-            Console.WriteLine(test.DuplicateCount("aAabcd"));
-            Console.WriteLine(test.DuplicateCount("17133bbbBe"));
-            Console.WriteLine(test.DuplicateCount("AABB"));
-            Console.WriteLine(test.DuplicateCount("12334533777"));
-            Console.WriteLine(test.DuplicateCount("abc"));
-            Console.ReadLine();
+            //Console.WriteLine(test.DuplicateCount("aAabcd"));
+            //Console.WriteLine(test.DuplicateCount("17133bbbBe"));
+            //Console.WriteLine(test.DuplicateCount("AABB"));
+            //Console.WriteLine(test.DuplicateCount("12334533777"));
+            //Console.WriteLine(test.DuplicateCount("abc"));
+            //Console.ReadLine();
+
+            //Console.WriteLine(test.Narcissistic(153));
+            //Console.WriteLine(test.Narcissistic(1652));
+            //Console.ReadLine();
             
+
+
         }
     }
 }

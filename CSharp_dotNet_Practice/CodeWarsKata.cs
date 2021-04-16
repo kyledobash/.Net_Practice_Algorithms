@@ -117,31 +117,110 @@ namespace CSharp_dotNet_Practice
         //    }
         //}
 
-        public int DuplicateCount(string str)
-        {
-            string parsedInput = str.ToLower();
-            int mostDuplicates = 0;
+        //public int DuplicateCount(string str)
+        //{
+        //    //create a result variable
+            //parse the input string
 
-            for (int i = 0; i < parsedInput.Length; i++)
+            //iterate over the string
+            //if index + 1 is same as index
+            //increment counter
+            //else
+            //if counter is greater than result variable
+            //result variable = counter
+            //reset counter
+            //return result
+
+            //    int mostRepeating = 0;
+            //    string parsedInput = str.ToLower();
+
+            //    int currentRepeating = 0;
+            //    for (int i = 0; i < parsedInput.Length - 1; i++)
+            //    {
+            //        if (parsedInput[i] == parsedInput[i + 1])
+            //        {
+            //            currentRepeating++;
+            //        }
+            //        else
+            //        {
+            //            currentRepeating++;
+            //            if (currentRepeating > mostRepeating)
+            //            {
+            //                mostRepeating = currentRepeating;
+            //                currentRepeating = 0;
+            //            }
+            //        }
+            //    }
+            //    return mostRepeating;
+            //}
+
+        //public bool Narcissistic(int value)
+        //{
+        //    List<int> container = new List<int>();
+        //    string stringInput = value.ToString();
+        //    string[] Inputarray = stringInput.Split('');
+
+        //    for (int i = 0; i < Inputarray.Length; i++)
+        //    {
+        //        container.Add(Convert.ToInt32(Inputarray[i]));
+        //    }
+
+        //    int sum = 0;
+        //    foreach (int digit in container)
+        //    {
+        //        sum += (Convert.ToInt32(Math.Pow(digit, container.Count)));
+        //    }
+
+        //    if (sum == value)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        public static string GetReadableTime(int seconds)
+        {
+            if (seconds < 60)
             {
-                int currentDuplicates = 0;
-                for (int j = i + 1; j < parsedInput.Length; j++)
+                if (seconds < 10)
                 {
-                    if (parsedInput[j] == parsedInput[i] && currentDuplicates == 0)
-                    {
-                        currentDuplicates = 2;
-                    }
-                    else if (parsedInput[j] == parsedInput[i])
-                    {
-                        currentDuplicates++;
-                    }
+                    return "00:00:0" + seconds;
                 }
-                if (currentDuplicates > mostDuplicates)
+                else if (seconds >  10)
                 {
-                    mostDuplicates = currentDuplicates;
+                    return "00:00:" + seconds;
                 }
             }
-            return mostDuplicates;
+            else if (seconds > 60 && seconds < 3600)
+            {
+                int minutes = seconds / 60;
+                int leftOverSeconds = 3600 - seconds;
+
+                if (minutes < 10)
+                {
+                    string stringMinutes = "0" + minutes.ToString();
+                }
+            }
+            else // (seconds > 3600)
+            {
+
+            }
+        }
+
+        public static string StringifyWithZero(int number)
+        {
+            if  (number < 10)
+            {
+                string stringified = "0" + number;
+                return stringified;
+            }
+            else
+            {
+                return number.ToString();
+            }
         }
     }
 }
