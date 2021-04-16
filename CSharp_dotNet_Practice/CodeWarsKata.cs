@@ -181,36 +181,31 @@ namespace CSharp_dotNet_Practice
         //    }
         //}
 
-        public static string GetReadableTime(int seconds)
+        public string GetReadableTime(int seconds)
         {
             if (seconds < 60)
             {
-                if (seconds < 10)
-                {
-                    return "00:00:0" + seconds;
-                }
-                else if (seconds >  10)
-                {
-                    return "00:00:" + seconds;
-                }
+                return "00:00:" + StringifyWithZero(seconds);
             }
             else if (seconds > 60 && seconds < 3600)
             {
                 int minutes = seconds / 60;
-                int leftOverSeconds = 3600 - seconds;
+                int leftOverSeconds = seconds - (minutes * 60);
 
-                if (minutes < 10)
-                {
-                    string stringMinutes = "0" + minutes.ToString();
-                }
+                return "00:" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
             }
             else // (seconds > 3600)
             {
+                int hours = seconds / 3600;
+                int leftover = seconds - (hours * 3600);
+                int minutes = leftover / 60;
+                int leftOverSeconds = seconds - (minutes * 60);
 
+                return StringifyWithZero(hours) + ":" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
             }
         }
 
-        public static string StringifyWithZero(int number)
+        public string StringifyWithZero(int number)
         {
             if  (number < 10)
             {

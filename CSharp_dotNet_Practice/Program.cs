@@ -50,9 +50,13 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.Narcissistic(153));
             //Console.WriteLine(test.Narcissistic(1652));
             //Console.ReadLine();
-            
 
-
+            Console.WriteLine("00:00:00", test.GetReadableTime(0));
+            Console.WriteLine("00:00:05", test.GetReadableTime(5));
+            Console.WriteLine("00:01:00", test.GetReadableTime(60));
+            Console.WriteLine("23:59:59", test.GetReadableTime(86399));
+            Console.WriteLine("99:59:59", test.GetReadableTime(359999));
+            Console.ReadLine();
         }
     }
 }
