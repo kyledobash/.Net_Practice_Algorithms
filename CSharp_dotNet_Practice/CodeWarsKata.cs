@@ -181,41 +181,55 @@ namespace CSharp_dotNet_Practice
         //    }
         //}
 
-        public string GetReadableTime(int seconds)
+        //public string GetReadableTime(int seconds)
+        //{
+        //    if (seconds < 60)
+        //    {
+        //        return "00:00:" + StringifyWithZero(seconds);
+        //    }
+        //    else if (seconds > 60 && seconds < 3600)
+        //    {
+        //        int minutes = seconds / 60;
+        //        int leftOverSeconds = seconds - (minutes * 60);
+
+        //        return "00:" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
+        //    }
+        //    else // (seconds > 3600)
+        //    {
+        //        int hours = seconds / 3600;
+        //        int leftover = seconds - (hours * 3600);
+        //        int minutes = leftover / 60;
+        //        int leftOverSeconds = seconds - (minutes * 60);
+
+        //        return StringifyWithZero(hours) + ":" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
+        //    }
+        //}
+
+        //public string StringifyWithZero(int number)
+        //{
+        //    if  (number < 10)
+        //    {
+        //        string stringified = "0" + number;
+        //        return stringified;
+        //    }
+        //    else
+        //    {
+        //        return number.ToString();
+        //    }
+        //}
+
+
+        // WRITE AN ALGORITHM THAT TAKES AN ARRAY AND MOVES ALL THJE ZEROES TO THE END,
+        // PRESERVING THE ORDER OF THE OTHER ELEMENTS
+
+        public int[] MoveZeroes(int[] arr)
         {
-            if (seconds < 60)
-            {
-                return "00:00:" + StringifyWithZero(seconds);
-            }
-            else if (seconds > 60 && seconds < 3600)
-            {
-                int minutes = seconds / 60;
-                int leftOverSeconds = seconds - (minutes * 60);
-
-                return "00:" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
-            }
-            else // (seconds > 3600)
-            {
-                int hours = seconds / 3600;
-                int leftover = seconds - (hours * 3600);
-                int minutes = leftover / 60;
-                int leftOverSeconds = seconds - (minutes * 60);
-
-                return StringifyWithZero(hours) + ":" + StringifyWithZero(minutes) + ":" + StringifyWithZero(leftOverSeconds);
-            }
-        }
-
-        public string StringifyWithZero(int number)
-        {
-            if  (number < 10)
-            {
-                string stringified = "0" + number;
-                return stringified;
-            }
-            else
-            {
-                return number.ToString();
-            }
+            int[] noZeroes = arr.Where(val => val != 0).ToArray();
+            int[] allZeroes = arr.Where(val => val == 0).ToArray();
+            int[] result = new int[noZeroes.Length + allZeroes.Length];
+            Array.Copy(noZeroes, result, noZeroes.Length);
+            Array.Copy(allZeroes, 0, result, noZeroes.Length, allZeroes.Length);
+            return result;
         }
     }
 }
