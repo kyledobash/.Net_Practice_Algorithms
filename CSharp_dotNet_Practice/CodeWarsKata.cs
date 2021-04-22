@@ -120,39 +120,39 @@ namespace CSharp_dotNet_Practice
         //public int DuplicateCount(string str)
         //{
         //    //create a result variable
-            //parse the input string
+        //parse the input string
 
-            //iterate over the string
-            //if index + 1 is same as index
-            //increment counter
-            //else
-            //if counter is greater than result variable
-            //result variable = counter
-            //reset counter
-            //return result
+        //iterate over the string
+        //if index + 1 is same as index
+        //increment counter
+        //else
+        //if counter is greater than result variable
+        //result variable = counter
+        //reset counter
+        //return result
 
-            //    int mostRepeating = 0;
-            //    string parsedInput = str.ToLower();
+        //    int mostRepeating = 0;
+        //    string parsedInput = str.ToLower();
 
-            //    int currentRepeating = 0;
-            //    for (int i = 0; i < parsedInput.Length - 1; i++)
-            //    {
-            //        if (parsedInput[i] == parsedInput[i + 1])
-            //        {
-            //            currentRepeating++;
-            //        }
-            //        else
-            //        {
-            //            currentRepeating++;
-            //            if (currentRepeating > mostRepeating)
-            //            {
-            //                mostRepeating = currentRepeating;
-            //                currentRepeating = 0;
-            //            }
-            //        }
-            //    }
-            //    return mostRepeating;
-            //}
+        //    int currentRepeating = 0;
+        //    for (int i = 0; i < parsedInput.Length - 1; i++)
+        //    {
+        //        if (parsedInput[i] == parsedInput[i + 1])
+        //        {
+        //            currentRepeating++;
+        //        }
+        //        else
+        //        {
+        //            currentRepeating++;
+        //            if (currentRepeating > mostRepeating)
+        //            {
+        //                mostRepeating = currentRepeating;
+        //                currentRepeating = 0;
+        //            }
+        //        }
+        //    }
+        //    return mostRepeating;
+        //}
 
         //public bool Narcissistic(int value)
         //{
@@ -222,13 +222,33 @@ namespace CSharp_dotNet_Practice
         // WRITE AN ALGORITHM THAT TAKES AN ARRAY AND MOVES ALL THJE ZEROES TO THE END,
         // PRESERVING THE ORDER OF THE OTHER ELEMENTS
 
-        public int[] MoveZeroes(int[] arr)
+        //public int[] MoveZeroes(int[] arr)
+        //{
+        //    int[] noZeroes = arr.Where(val => val != 0).ToArray();
+        //    int[] allZeroes = arr.Where(val => val == 0).ToArray();
+        //    int[] result = new int[noZeroes.Length + allZeroes.Length];
+        //    Array.Copy(noZeroes, result, noZeroes.Length);
+        //    Array.Copy(allZeroes, 0, result, noZeroes.Length, allZeroes.Length);
+        //    return result;
+        //}
+
+        public string DuplicateEncode(string word)
         {
-            int[] noZeroes = arr.Where(val => val != 0).ToArray();
-            int[] allZeroes = arr.Where(val => val == 0).ToArray();
-            int[] result = new int[noZeroes.Length + allZeroes.Length];
-            Array.Copy(noZeroes, result, noZeroes.Length);
-            Array.Copy(allZeroes, 0, result, noZeroes.Length, allZeroes.Length);
+            //create result string
+
+            //iterate over word
+            //create temp word without current index
+            //if temp word contains current char
+            //push parans to result
+
+            string result = "";
+            word = word.ToLower();
+            for (int i = 0; i < word.Length; i++)
+            {
+                string temp = word.Remove(i, 1);
+                string addition = temp.Contains(word[i]) ? ")" : "(";
+                result += addition;
+            }
             return result;
         }
     }
