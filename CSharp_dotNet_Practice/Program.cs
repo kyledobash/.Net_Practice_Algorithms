@@ -61,9 +61,14 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
             //Console.ReadLine();
 
-            Console.WriteLine(test.DuplicateEncode("din"));
-            Console.WriteLine(test.DuplicateEncode("recede"));
-            Console.WriteLine(test.DuplicateEncode("Success"));
+            //Console.WriteLine(test.DuplicateEncode("din"));
+            //Console.WriteLine(test.DuplicateEncode("recede"));
+            //Console.WriteLine(test.DuplicateEncode("Success"));
+            //Console.ReadLine();
+
+            Console.WriteLine(test.ToCamelCase("the-stealth-warrior"));
+            Console.WriteLine(test.ToCamelCase("the_stealth_warrior"));
+            Console.WriteLine(test.ToCamelCase("thestealthwarrior"));
             Console.ReadLine();
         }
     }

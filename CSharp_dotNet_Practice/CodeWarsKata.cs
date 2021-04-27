@@ -232,24 +232,43 @@ namespace CSharp_dotNet_Practice
         //    return result;
         //}
 
-        public string DuplicateEncode(string word)
+        //public string DuplicateEncode(string word)
+        //{
+        //    //create result string
+
+        //    //iterate over word
+        //    //create temp word without current index
+        //    //if temp word contains current char
+        //    //push parans to result
+
+        //    string result = "";
+        //    word = word.ToLower();
+        //    for (int i = 0; i < word.Length; i++)
+        //    {
+        //        string temp = word.Remove(i, 1);
+        //        string addition = temp.Contains(word[i]) ? ")" : "(";
+        //        result += addition;
+        //    }
+        //    return result;
+        //}
+
+        public string ToCamelCase(string str)
         {
-            //create result string
 
-            //iterate over word
-            //create temp word without current index
-            //if temp word contains current char
-            //push parans to result
-
-            string result = "";
-            word = word.ToLower();
-            for (int i = 0; i < word.Length; i++)
+            string camelCase = "";
+            for (int i = 0; i < str.Length; i++)
             {
-                string temp = word.Remove(i, 1);
-                string addition = temp.Contains(word[i]) ? ")" : "(";
-                result += addition;
+                if (str[i].ToString() != "-" && str[i].ToString() != "_")
+                {
+                    camelCase += str[i].ToString();
+                }
+                else
+                {
+                    camelCase += str[i + 1].ToString().ToUpper();
+                    i++;
+                }
             }
-            return result;
+            return camelCase;
         }
     }
 }
