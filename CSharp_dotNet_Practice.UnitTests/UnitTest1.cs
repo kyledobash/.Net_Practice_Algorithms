@@ -12,11 +12,16 @@ namespace CSharp_dotNet_Practice.UnitTests
         {
             //arrange
             CodeWarsKata test = new CodeWarsKata();
+            string emptyString = "";
+
+            string expected = "";
+            string actual;
 
             //act
+            actual = test.reverseString("");
 
             //assert
-            
+            Assert.AreEqual(expected, actual);
         }
     }
 }
