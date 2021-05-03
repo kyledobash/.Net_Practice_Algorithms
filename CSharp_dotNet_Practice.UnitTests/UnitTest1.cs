@@ -18,7 +18,24 @@ namespace CSharp_dotNet_Practice.UnitTests
             string actual;
 
             //act
-            actual = test.reverseString("");
+            actual = test.reverseString(emptyString);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReverseString_InputSingleChar_ReturnSingleChar()
+        {
+            //arrange
+            CodeWarsKata test = new CodeWarsKata();
+            string singleChar = "k";
+
+            string expected = "k";
+            string actual;
+
+            //act
+            actual = test.reverseString(singleChar);
 
             //assert
             Assert.AreEqual(expected, actual);
