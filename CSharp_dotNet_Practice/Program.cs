@@ -10,10 +10,6 @@ namespace CSharp_dotNet_Practice
     {
         static void Main(string[] args)
         {
-            CodeWarsKata test = new CodeWarsKata();
-
-            test.reverseString("");
-
             //Console.WriteLine(test.DescendingOrder(16544));
             //Console.WriteLine(test.DescendingOrder(98547));
             //Console.WriteLine(test.DescendingOrder(1100000));

@@ -273,7 +273,19 @@ namespace CSharp_dotNet_Practice
 
         public string reverseString(string str)
         {
-
+            string result = "";
+            if (str.Length == 0)
+            {
+                return result;
+            }
+            else
+            {
+                for (int i = str.Length - 1; i >= 0; i--)
+                {
+                    result += str[i];
+                }
+                return result;
+            }
         }
     }
 }
