@@ -74,5 +74,22 @@ namespace CSharp_dotNet_Practice.UnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ReverseString_InputString1Space_ReturnStringReversed()
+        {
+            //arrange
+            CodeWarsKata test = new CodeWarsKata();
+            string testString = "kyle dobash";
+
+            string expected = "hsabod elyk";
+            string actual;
+
+            //act
+            actual = test.reverseString(testString);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
