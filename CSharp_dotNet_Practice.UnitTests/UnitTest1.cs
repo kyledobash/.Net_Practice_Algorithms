@@ -40,5 +40,22 @@ namespace CSharp_dotNet_Practice.UnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ReverseString_InputRepeatChars_ReturnRepeatChars()
+        {
+            //arrange
+            CodeWarsKata test = new CodeWarsKata();
+            string repeatChars = "kk";
+
+            string expected = "kk";
+            string actual;
+
+            //act
+            actual = test.reverseString(repeatChars);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
