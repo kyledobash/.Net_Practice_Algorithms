@@ -252,23 +252,28 @@ namespace CSharp_dotNet_Practice
         //    return result;
         //}
 
-        public string ToCamelCase(string str)
+        //public string ToCamelCase(string str)
+        //{
+
+        //    string camelCase = "";
+        //    for (int i = 0; i < str.Length; i++)
+        //    {
+        //        if (str[i].ToString() != "-" && str[i].ToString() != "_")
+        //        {
+        //            camelCase += str[i].ToString();
+        //        }
+        //        else
+        //        {
+        //            camelCase += str[i + 1].ToString().ToUpper();
+        //            i++;
+        //        }
+        //    }
+        //    return camelCase;
+        //}
+
+        public string reverseString(string str)
         {
 
-            string camelCase = "";
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (str[i].ToString() != "-" && str[i].ToString() != "_")
-                {
-                    camelCase += str[i].ToString();
-                }
-                else
-                {
-                    camelCase += str[i + 1].ToString().ToUpper();
-                    i++;
-                }
-            }
-            return camelCase;
         }
     }
 }

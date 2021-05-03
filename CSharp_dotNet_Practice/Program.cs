@@ -12,6 +12,7 @@ namespace CSharp_dotNet_Practice
         {
             CodeWarsKata test = new CodeWarsKata();
 
+            test.reverseString("");
 
             //Console.WriteLine(test.DescendingOrder(16544));
             //Console.WriteLine(test.DescendingOrder(98547));
@@ -66,10 +67,10 @@ namespace CSharp_dotNet_Practice
             //Console.WriteLine(test.DuplicateEncode("Success"));
             //Console.ReadLine();
 
-            Console.WriteLine(test.ToCamelCase("the-stealth-warrior"));
-            Console.WriteLine(test.ToCamelCase("the_stealth_warrior"));
-            Console.WriteLine(test.ToCamelCase("thestealthwarrior"));
-            Console.ReadLine();
+            //Console.WriteLine(test.ToCamelCase("the-stealth-warrior"));
+            //Console.WriteLine(test.ToCamelCase("the_stealth_warrior"));
+            //Console.WriteLine(test.ToCamelCase("thestealthwarrior"));
+            //Console.ReadLine();
         }
     }
 }
