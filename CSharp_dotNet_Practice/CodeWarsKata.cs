@@ -287,5 +287,31 @@ namespace CSharp_dotNet_Practice
                 return result;
             }
         }
+
+        public bool isPalindrome(string str)
+        {
+            if (str.Length == 0 || str.Length == 1)
+            {
+                return true;
+            }
+
+            int j = str.Length - 1;
+            for (int i = 0; i <= str.Length - 1; i++)
+            {
+                if (str[i] != str[j])
+                {
+                    return false;
+                }
+                else if (i == j)
+                {
+                    return true;
+                }
+                else
+                {
+                    j--;
+                }
+            }
+            return true;
+        }
     }
 }
