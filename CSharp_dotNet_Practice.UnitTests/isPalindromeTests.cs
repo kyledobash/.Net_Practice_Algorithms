@@ -22,5 +22,22 @@ namespace CSharp_dotNet_Practice.UnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void isPalindrome_InputSingleChar_ReturnsTrue()
+        {
+            //arange
+            CodeWarsKata test = new CodeWarsKata();
+            string singleChar = "k";
+
+            bool expected = true;
+            bool actual;
+
+            //act
+            actual = test.isPalindrome(singleChar);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
